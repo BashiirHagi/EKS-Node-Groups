@@ -3,7 +3,7 @@ variable "vpc_id" {
   description = "AWS account VPC ID"
 }
 
-variable "local_subnet_ids" {
+variable "private_subnet_ids" {
   type        = list(any)
   description = "Account local subnets"
   default     = []

@@ -2,7 +2,7 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
-data "aws_subnets" "local" {
+data "aws_subnets" "private" {
 
   for_each = toset(data.aws_availability_zones.available.zone_ids)
   filter {
@@ -18,7 +18,7 @@ data "aws_subnets" "local" {
   filter {
     name = "tag:Name"
 
-    values = ["local-subnet*"]
+    values = ["private-subnet*"]
   }
 }
 
