@@ -5,6 +5,6 @@ variable "vpc_id" {
 
 variable "private_subnet_ids" {
   type        = list(any)
-  description = "Account local subnets"
+  description = "Account private subnets"
   default     = []
 }
